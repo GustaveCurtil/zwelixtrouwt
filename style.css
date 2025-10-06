@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+*, html {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --afstand-rand: 1.8rem;
+}
+
+html {}
+h1, h2, h3 {font-weight: 400;}
+img {
+    width: 100%;
+    line-height: 0;
+    max-height: 100svh;
+    object-fit: contain;
+}
+
+body {
+    width: 100vw;
+    height: 100svh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+section#kaart {
+    /* position:fixed;
+    top: 0; */
+
+    margin: var(--afstand-rand);
+
+    height: calc(100svh - (2 * var(--afstand-rand)));
+    width: calc(100vw - (2 * var(--afstand-rand)));
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+
+    font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
+}
+
+#kaart p {font-size: 2rem;}
+
+section#inhoud {
+    padding: var(--afstand-rand);
+}
+
+
+
+h1 {
+    font-size: 3rem;
+}
+
