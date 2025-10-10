@@ -67,7 +67,7 @@ div#kaart {
 
 section {
     position: absolute;
-    padding: calc(2 * var(--afstand-rand));
+    padding: calc((2 * var(--afstand-rand)) + var(--afstand-klein));
     height: calc(100%);
     width: calc(100%);
     top: 0;
@@ -103,7 +103,7 @@ h1 {
 button {
     z-index: 20;
     position: absolute;
-    bottom: calc(2 * var(--afstand-rand));
+    bottom: calc((2 * var(--afstand-rand) + var(--afstand-klein)));
     left: 50%;
     translate: -50% 0%;
 
