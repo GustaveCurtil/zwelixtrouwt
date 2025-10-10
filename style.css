@@ -8,10 +8,36 @@
 
 :root {
     --afstand-rand: 1.4rem;
+    --afstand-klein: 0rem;
+    --afstand-mini: 0rem;
     --kleur-achtergrond: rgb(255, 250, 250);
+    --kleur-tekst: rgb(18, 72, 18);
 }
 
-html {font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+@media screen and (min-width: 800px) {
+    :root {
+    --afstand-rand: 3rem;
+    --afstand-klein: 0.8rem;
+    --afstand-mini: 0rem;
+    --kleur-achtergrond: rgb(255, 250, 250);
+}
+}
+
+::-webkit-scrollbar {
+  width: var(--afstand-mini);
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff; /* dark background */
+  border-radius: var(--afstand-mini);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(151, 155, 37);
+  border-radius: var(--afstand-mini);
+}
+
+html {font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: var(--kleur-tekst);}
 
 h1, h2, h3 {font-weight: 400;}
 img {
@@ -25,64 +51,46 @@ body {
     width: 100vw;
     height: 100svh;
     overflow-x: hidden;
-    position: relative;
+    overflow-y: hidden;
 
     background-color: var(--kleur-achtergrond);
 }
 
-section#kaart {
-    /* position:fixed;
-    top: 0; */
-
+div#kaart {
+    background-image: url(papier4.jpg);
+    background-size: cover;
+    width: calc(100% - 2 * (var(--afstand-klein)));
+    height: calc(100% - 2 * (var(--afstand-klein)));
     position: relative;
+}
 
-    margin: var(--afstand-rand);
-
-    height: calc(100svh - (2 * var(--afstand-rand)));
-    width: calc(100vw - (2 * var(--afstand-rand)));
-
-    border: 1px solid black;
-
+section {
+    position: absolute;
+    padding: calc(2 * var(--afstand-rand));
+    height: calc(100%);
+    width: calc(100%);
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
+}
 
+
+#kanten>img{position: absolute; height: calc((var(--afstand-rand) * 2) - var(--afstand-klein));}
+#kanten>img:nth-of-type(1) {top: var(--afstand-rand); left: 50%; translate: -50% -50%;}
+#kanten>img:nth-of-type(2) {right: var(--afstand-rand); top: 50%; translate: 50% -50%; transform: rotate(90deg);}
+#kanten>img:nth-of-type(3) {bottom: var(--afstand-rand); left: 50%; translate: -50% 50%;}
+#kanten>img:nth-of-type(4) {top: 50%; left: var(--afstand-rand); translate: -50% -50%;  transform: rotate(90deg);}
+
+#eerste p {font-size: 2rem;}
+
+section#eerste {
     font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
 }
 
-#hoeken>svg {
-    position: absolute;
-}
-
-#hoeken>svg:nth-of-type(1){
-    top: -1px;
-    left: -1px;
-}
-
-#hoeken>svg:nth-of-type(2){
-    top: -1px;
-    right: -1px;
-
-    rotate: 90deg;
-}
-
-#hoeken>svg:nth-of-type(3){
-    bottom: -1px;
-    right: -1px;
-    rotate: 180deg;
-}
-
-#hoeken>svg:nth-of-type(4){
-    bottom: -1px;
-    left: -1px;
-    rotate: 270deg;
-}
-
-#kaart p {font-size: 2rem;}
-
-section#inhoud {
-    padding: var(--afstand-rand);
+section#tweede {
+    display: none;
 }
 
 
