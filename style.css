@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 *, html {
     padding: 0;
@@ -37,7 +38,7 @@
   border-radius: var(--afstand-mini);
 }
 
-html {font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: var(--kleur-tekst);}
+html {font-family: "Source Serif 4", serif; color: var(--kleur-tekst);}
 
 h1, h2, h3 {font-weight: 400;}
 img {
@@ -46,6 +47,8 @@ img {
     max-height: 100svh;
     object-fit: contain;
 }
+
+p {font-family: "Source Serif 4", serif;}
 
 body {
     width: 100vw;
@@ -84,11 +87,13 @@ section {
 #kanten>img:nth-of-type(3) {bottom: var(--afstand-rand); left: 50%; translate: -50% 50%;}
 #kanten>img:nth-of-type(4) {top: 50%; left: var(--afstand-rand); translate: -50% -50%;  transform: rotate(90deg);}
 
-#eerste p {font-size: 2rem;}
+#eerste p {font-size: 1.2rem;}
 
-section#eerste {
+h1, h2, section#eerste p {
     font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
 }
+section#eerste p {font-size: 2rem;}
+h2 {font-size: 2.2rem;}
 
 section {
     display: none;
