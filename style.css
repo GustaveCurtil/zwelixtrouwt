@@ -52,6 +52,7 @@ body {
     height: 100svh;
     overflow-x: hidden;
     overflow-y: hidden;
+    background-color: #fefaf7;
 
     background-color: var(--kleur-achtergrond);
 }
@@ -103,7 +104,9 @@ button {
     position: absolute;
     bottom: calc(3 * var(--afstand-rand));
     left: 50%;
-    translate: -50% 00%;
+    translate: -50% 0%;
+
+    color: rgb(37, 37, 37);
     border: none;
     outline: 1px dotted rgb(37, 37, 37);
     outline-offset: -4px;
