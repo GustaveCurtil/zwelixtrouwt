@@ -90,7 +90,7 @@ section#eerste {
     font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
 }
 
-section#tweede {
+section {
     display: none;
 }
 
@@ -101,6 +101,7 @@ h1 {
 }
 
 button {
+    z-index: 20;
     position: absolute;
     bottom: calc(3 * var(--afstand-rand));
     left: 50%;
