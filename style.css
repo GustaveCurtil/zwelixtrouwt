@@ -122,6 +122,11 @@ section img {
   mask-composite: intersect; /* For Firefox */
 }
 
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
 button {
   touch-action: manipulation; /* reduces default double-tap zoom */
 }
@@ -129,11 +134,12 @@ button {
 button {
     z-index: 20;
     position: absolute;
-    bottom: calc((var(--afstand-rand) + var(--afstand-klein)));
+    bottom: calc(2 * var(--afstand-rand));
     left: 50%;
     translate: -50% 0%;
 
     color: var(--kleur-tekst);
+    background-color: none;
     border: 1px solid var(--kleur-tekst);
     cursor: pointer;
     font-size: 14px;
