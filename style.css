@@ -11,6 +11,11 @@
 
 html, body {
   touch-action: manipulation;
+  cursor: url("blueflowers.cur"), auto;
+}
+
+body {
+  cursor: pointer; /* makes Safari treat it as interactive */
 }
 
 :root {
