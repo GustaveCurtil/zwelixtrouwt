@@ -60,24 +60,23 @@ body {
     height: 100svh;
     overflow-x: hidden;
     overflow-y: hidden;
-
+padding: var(--afstand-rand);
     background-color: var(--kleur-achtergrond);
 }
 
 div#kaart {
-    width: calc(100% - 2 * (var(--afstand-rand)));
-    height: calc(100% - 2 * (var(--afstand-rand)));
+    width: calc(100%);
+    height: calc(100%);
     position: relative;
-    margin: var(--afstand-rand);
     border: 1px solid var(--kleur-tekst);
 }
 
 section {
     position: absolute;
-    padding: calc((2 * var(--afstand-rand)) + var(--afstand-klein));
-    height: calc(100%);
-    width: calc(100%);
-    top: 0;
+    padding: calc(var(--afstand-rand));
+    height: calc(100% - 2 * var(--afstand-rand));
+    width: calc(100% - 2 * var(--afstand-rand));
+    top: var(--afstand-rand);
     display: flex;
     flex-direction: column;
     justify-content: center;
