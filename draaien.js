@@ -1,4 +1,5 @@
-let buttons = document.querySelectorAll('button')
+let pages = document.querySelectorAll('section:not(#last)');
+let button = document.querySelector('button')
 let link = document.querySelector('a');
 let sections = document.querySelectorAll('section');
 let page = 0;
@@ -6,15 +7,19 @@ let tekst = "oker";
 
 updatePage();
 
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
+pages.forEach(prot => {
+    prot.addEventListener('click', () => {
         // Increment page index and loop back to 0 when it exceeds last section
         page = (page + 1) % sections.length;
         updatePage();
     });
 });
 
-
+button.addEventListener('click', () => {
+    // Increment page index and loop back to 0 when it exceeds last section
+    page = (page + 1) % sections.length;
+    updatePage();
+});
 
 link.addEventListener('click', () => {
     // Increment page index and loop back to 0 when it exceeds last section
