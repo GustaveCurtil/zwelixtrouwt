@@ -10,12 +10,12 @@
 }
 
 html, body, section {
-  cursor: url("blueflowers.cur"), auto;
+  cursor: url("blueflowers.cur"), pointer;
   touch-action: manipulation;
 }
 
 body, section {
-  cursor: pointer; /* makes Safari treat it as interactive */
+    cursor: url("blueflowers.cur"), pointer; /* makes Safari treat it as interactive */
 }
 
 :root {
