@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+  touch-action: manipulation;
+}
+
 :root {
     --afstand-rand: 1.4rem;
     --afstand-klein: 0rem;
