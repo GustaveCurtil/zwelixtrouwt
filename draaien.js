@@ -8,11 +8,11 @@ let tekst = "oker";
 updatePage();
 
 pages.forEach(prot => {
-    prot.addEventListener('click', () => {
-        // Increment page index and loop back to 0 when it exceeds last section
-        page = (page + 1) % sections.length;
-        updatePage();
-    });
+prot.addEventListener('pointerdown', () => {
+    page = (page + 1) % sections.length;
+    updatePage();
+});
+
 });
 
 button.addEventListener('click', () => {
