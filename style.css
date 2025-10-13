@@ -145,7 +145,7 @@ button {
 button {
     z-index: 20;
     position: absolute;
-    bottom: calc(2 * var(--afstand-rand));
+    bottom: calc( var(--afstand-rand) + var(--afstand-klein));
     left: 50%;
     translate: -50% 0%;
 
