@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, section {
   touch-action: manipulation;
   cursor: url("blueflowers.cur"), auto;
 }
@@ -157,9 +157,8 @@ button {
     bottom: calc( var(--afstand-rand) + var(--afstand-klein));
     left: 50%;
     translate: -50% 0%;
-
+    background-color: var(--kleur-achtergrond);
     color: var(--kleur-tekst);
-    background-color: none;
     border: 1px solid var(--kleur-tekst);
     cursor: pointer;
     font-size: 14px;
@@ -169,14 +168,14 @@ button {
 
 }
 
-button:active {
+/* button:active {
     box-shadow:
         inset -1px -1px #fff,
         inset 1px 1px #292929,
         inset -2px -2px #ffffff,
         inset 2px 2px rgb(158, 158, 158);
     background-color: none;
-}
+} */
 
 div#kaart img {
   position: absolute;
