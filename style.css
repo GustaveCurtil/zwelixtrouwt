@@ -31,11 +31,11 @@ body, section {
   }
 
 @media screen and (min-width: 800px) {
-    :root {
-    --afstand-rand: 3rem;
-    --afstand-klein: 0.8rem;
-    --afstand-mini: 0rem;
-}
+  :root {
+      --afstand-rand: 3rem;
+      --afstand-klein: 0.8rem;
+      --afstand-mini: 0rem;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -54,6 +54,33 @@ body, section {
 
 html {font-family: "Source Serif 4", serif; color: var(--kleur-tekst); cursor: url(blueflowers.cur), auto;}
 
+h1 {
+  font-size: 2.8rem;
+}
+h1, h2, section#eerste p {
+    font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
+}
+
+section#eerste p {
+  font-size: 2.4rem;
+}
+h1, h2 {
+  font-family: var(--font-tekst);
+}
+h2 {font-size: 2rem; text-transform: uppercase;}
+p {font-family: var(--font-montserrat); font-size: 1.1rem;}
+
+@media screen and (min-width: 500px) {
+  p {font-size: 1.6rem;}
+  h2 {font-size: 2.6rem;}
+  h1 {
+    font-size: 4rem;
+  }
+  section#eerste p {
+  font-size: 3rem;
+}
+}
+
 h1, h2, h3 {font-weight: 400;}
 img {
     max-width: 100%;
@@ -61,8 +88,6 @@ img {
     line-height: 0;
     object-fit: contain;
 }
-
-p {font-family: var(--font-montserrat); font-size: 1.2rem;}
 
 body {
     width: 100vw;
@@ -99,19 +124,6 @@ section {
 #kanten>img:nth-of-type(3) {bottom: var(--afstand-rand); left: 50%; translate: -50% 50%;}
 #kanten>img:nth-of-type(4) {top: 50%; left: var(--afstand-rand); translate: -50% -50%;  transform: rotate(90deg);}
 
-#eerste p {font-size: 1.2rem;}
-
-h1, h2, section#eerste p {
-    font-family: "Monsieur La Doulaise", cursive; font-weight: 400;
-}
-h1, h2 {
-  font-family: var(--font-tekst);
-}
-section#eerste p {
-  font-family: var(--font-montserrat);
-}
-section#eerste p {font-size: 1.4rem;}
-h2 {font-size: 2.2rem; text-transform: uppercase;}
 
 section {
     display: none;
@@ -121,9 +133,6 @@ p {
     text-align: center;
 }
 
-h1 {
-    font-size: 2.8rem;
-}
 /* section img {
 
   -webkit-mask-image: 
