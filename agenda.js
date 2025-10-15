@@ -81,19 +81,24 @@
     };
 
     /* ---------- Button actions ---------- */
-    document.getElementById('google').onclick = () =>
-      window.open(googleCalendarUrl(event), "_blank");
+    document.getElementById('google').onclick = () => {
+        window.open(googleCalendarUrl(event), "_blank");
+        page = 0;
+        updatePage();
+    }
 
     // document.getElementById('outlook').onclick = () =>
     //   window.open(outlookWebUrl(event), "_blank");
 
     document.getElementById('ics').onclick = () => {
-      const ics = makeICS({
-        title: event.title,
-        description: event.details,
-        location: event.location,
-        startDate: event.start,
-        endDate: event.end
-      });
-      downloadICS('zwelix-trouwt.ics', ics);
+        const ics = makeICS({
+            title: event.title,
+            description: event.details,
+            location: event.location,
+            startDate: event.start,
+            endDate: event.end
+        });
+        downloadICS('zwelix-trouwt.ics', ics);
+        page = 0;
+        updatePage();
     };

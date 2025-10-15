@@ -177,7 +177,7 @@ button {
 }
 
 button:hover {
-    cursor: url(calendarselecter.cur), pointer;
+    cursor: url(dove.cur), pointer;
   background-color: var(--kleur-tekst);
   color: var(--kleur-achtergrond);
 }
