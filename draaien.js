@@ -1,5 +1,5 @@
 let pages = document.querySelectorAll('section:not(#last)');
-let button = document.querySelector('button')
+// let button = document.querySelector('button')
 let link = document.querySelector('a');
 let sections = document.querySelectorAll('section');
 let page = 0;

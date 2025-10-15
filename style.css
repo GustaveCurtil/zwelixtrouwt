@@ -20,7 +20,7 @@ body, section {
 
 :root {
     --afstand-rand: 1.4rem;
-    --afstand-klein: 0rem;
+    --afstand-klein: 0.4rem;
     --afstand-mini: 0rem;
     --kleur-achtergrond: #f3efec;
     --kleur-tekst: rgb(25, 25, 25);
@@ -147,16 +147,24 @@ a {
   text-decoration: underline;
 }
 
-button {
-  touch-action: manipulation; /* reduces default double-tap zoom */
-}
-
-button {
+div#buttons {
     z-index: 20;
     position: absolute;
     bottom: calc( var(--afstand-rand) + var(--afstand-klein));
     left: 50%;
     translate: -50% 0%;
+    width: calc(100% - 2 * var(--afstand-klein) - 2 * var(--afstand-rand));
+    max-width: 400px;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+  touch-action: manipulation; /* reduces default double-tap zoom */
+}
+
+button {
     background-color: var(--kleur-achtergrond);
     color: var(--kleur-tekst);
     border: 1px solid var(--kleur-tekst);
@@ -164,8 +172,14 @@ button {
     font-size: 14px;
     text-transform: lowercase;
     letter-spacing: 2px;
-    padding: 5px 30px;
+    padding: var(--afstand-klein);
 
+}
+
+button:hover {
+    cursor: url(calendarselecter.cur), pointer;
+  background-color: var(--kleur-tekst);
+  color: var(--kleur-achtergrond);
 }
 
 /* button:active {
