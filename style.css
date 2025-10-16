@@ -117,6 +117,10 @@ section {
     align-items:center;
 }
 
+section:last-of-type {
+  padding-bottom: calc(2*var(--afstand-rand));
+}
+
 span {
   text-align: center;
 }
