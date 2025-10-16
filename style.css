@@ -53,6 +53,12 @@ body, section {
 }
 
 html {font-family: "Source Serif 4", serif; color: var(--kleur-tekst); cursor: url(blueflowers.cur), auto;}
+.negeer {cursor: url(belgie.cur), auto;}
+#nl {cursor: url(nederlands.cur), auto;}
+#fr {cursor: url(frans.cur), auto;}
+#eng {cursor: url(engels.cur), auto;}
+
+a:hover {text-decoration-style: wavy;}
 
 h1 {
   font-size: 2.8rem;
