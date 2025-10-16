@@ -83,8 +83,6 @@
     /* ---------- Button actions ---------- */
     document.getElementById('google').onclick = () => {
         window.open(googleCalendarUrl(event), "_blank");
-        page = 0;
-        updatePage();
     }
 
     // document.getElementById('outlook').onclick = () =>

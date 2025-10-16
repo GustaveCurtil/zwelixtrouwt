@@ -1,4 +1,4 @@
-let pages = document.querySelectorAll('section:not(#last, .negeer)');
+let pages = document.querySelectorAll('section:not(.negeer)');
 let links = document.querySelectorAll('a');
 let sections = document.querySelectorAll('section');
 let page = 0;
@@ -11,7 +11,8 @@ let taal = "NL"
 updatePage();
 
 pages.forEach(prot => {
-    prot.addEventListener('pointerdown', () => {
+    prot.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('button')) return;
         page = (page + 1) % sections.length;
         updatePage();
     });
