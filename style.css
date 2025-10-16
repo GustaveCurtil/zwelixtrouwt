@@ -117,7 +117,9 @@ section {
     align-items:center;
 }
 
-
+span {
+  text-align: center;
+}
 #kanten>img{position: absolute; height: calc((var(--afstand-rand) * 2) - var(--afstand-klein));}
 #kanten>img:nth-of-type(1) {top: var(--afstand-rand); left: 50%; translate: -50% -50%;}
 #kanten>img:nth-of-type(2) {right: var(--afstand-rand); top: 50%; translate: 50% -50%; transform: rotate(90deg);}
@@ -148,11 +150,12 @@ p {
     linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1) 2rem);
 
   -webkit-mask-composite: source-in;
-  mask-composite: intersect; /* For Firefox */
+
 } */
 
+
 a {
-  color: blue;
+  color: var(--kleur-tekst);
   text-decoration: underline;
 }
 
